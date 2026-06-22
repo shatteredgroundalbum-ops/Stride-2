@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView android:id="@+id/bgPortrait" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/bg_login_portrait" android:scaleType="centerCrop" android:visibility="visible"/>
+    <ImageView android:id="@+id/bgLandscape" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/bg_login_landscape" android:scaleType="centerCrop" android:visibility="gone"/>
+
+    <!-- PORTRAIT -->
+    <LinearLayout android:id="@+id/portraitLayout" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal" android:visibility="visible">
+        <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="45"/>
+        <ScrollView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="55" android:fillViewport="true" android:scrollbars="none">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center_horizontal" android:paddingStart="24dp" android:paddingEnd="24dp" android:paddingTop="40dp" android:paddingBottom="32dp">
+
+                <ImageView android:layout_width="180dp" android:layout_height="180dp" android:src="@drawable/img_logo" android:scaleType="fitCenter" android:layout_marginBottom="12dp"/>
+                <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/img_create_account" android:scaleType="fitStart" android:adjustViewBounds="true" android:layout_marginBottom="16dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/nameLayoutP" style="@style/StrideInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/full_name_hint" android:layout_marginBottom="12dp" app:startIconDrawable="@android:drawable/ic_menu_myplaces" app:startIconTint="@color/green_light">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/nameInputP" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPersonName" android:imeOptions="actionNext"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/emailLayoutP" style="@style/StrideInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/email_address_hint" android:layout_marginBottom="12dp" app:startIconDrawable="@android:drawable/ic_dialog_email" app:startIconTint="@color/green_light">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/emailInputP" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textEmailAddress" android:imeOptions="actionNext"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/passwordLayoutP" style="@style/StrideInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/password_hint" android:layout_marginBottom="12dp" app:startIconDrawable="@android:drawable/ic_lock_lock" app:startIconTint="@color/green_light" app:endIconMode="password_toggle">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/passwordInputP" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword" android:imeOptions="actionNext"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/confirmLayoutP" style="@style/StrideInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/confirm_password_hint" android:layout_marginBottom="16dp" app:startIconDrawable="@android:drawable/ic_lock_lock" app:startIconTint="@color/green_light" app:endIconMode="password_toggle">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/confirmInputP" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword" android:imeOptions="actionDone"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnCreateP" style="@style/StrideButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_create_account" android:layout_marginBottom="16dp"/>
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="— OR —" android:gravity="center" android:textColor="@color/gray_hint" android:layout_marginBottom="12dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center" android:layout_marginBottom="16dp">
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnGoogleP" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="56dp" android:layout_height="56dp" android:text="G" android:textSize="18sp" android:textStyle="bold" android:textColor="#4285F4" android:layout_marginEnd="8dp" app:cornerRadius="12dp" app:strokeColor="@color/gray_border"/>
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnAppleP" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="56dp" android:layout_height="56dp" android:text="A" android:textSize="18sp" android:textStyle="bold" android:textColor="#000000" android:layout_marginEnd="8dp" app:cornerRadius="12dp" app:strokeColor="@color/gray_border"/>
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnFacebookP" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="56dp" android:layout_height="56dp" android:text="f" android:textSize="20sp" android:textStyle="bold" android:textColor="#1877F2" android:layout_marginEnd="8dp" app:cornerRadius="12dp" app:strokeColor="@color/gray_border"/>
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnInstagramP" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="56dp" android:layout_height="56dp" android:text="In" android:textSize="14sp" android:textStyle="bold" android:textColor="#E1306C" app:cornerRadius="12dp" app:strokeColor="@color/gray_border"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Already have an account?  " android:textColor="@color/gray_text"/>
+                    <TextView android:id="@+id/goToLoginP" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Log In" android:textColor="@color/green_med" android:textStyle="bold" android:clickable="true" android:focusable="true"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- LANDSCAPE -->
+    <LinearLayout android:id="@+id/landscapeLayout" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal" android:visibility="gone">
+        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="42" android:gravity="center" android:padding="24dp">
+            <ImageView android:layout_width="220dp" android:layout_height="220dp" android:src="@drawable/img_logo" android:scaleType="fitCenter"/>
+        </LinearLayout>
+        <ScrollView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="58" android:fillViewport="true" android:scrollbars="none">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center_horizontal" android:paddingStart="24dp" android:paddingEnd="24dp" android:paddingTop="20dp" android:paddingBottom="20dp">
+
+                <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/img_create_account" android:scaleType="fitStart" android:adjustViewBounds="true" android:layout_marginBottom="10dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/nameLayoutL" style="@style/StrideInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/full_name_hint" android:layout_marginBottom="8dp" app:startIconDrawable="@android:drawable/ic_menu_myplaces" app:startIconTint="@color/green_light">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/nameInputL" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPersonName" android:imeOptions="actionNext"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/emailLayoutL" style="@style/StrideInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/email_address_hint" android:layout_marginBottom="8dp" app:startIconDrawable="@android:drawable/ic_dialog_email" app:startIconTint="@color/green_light">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/emailInputL" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textEmailAddress" android:imeOptions="actionNext"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/passwordLayoutL" style="@style/StrideInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/password_hint" android:layout_marginBottom="8dp" app:startIconDrawable="@android:drawable/ic_lock_lock" app:startIconTint="@color/green_light" app:endIconMode="password_toggle">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/passwordInputL" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword" android:imeOptions="actionNext"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/confirmLayoutL" style="@style/StrideInputLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/confirm_password_hint" android:layout_marginBottom="10dp" app:startIconDrawable="@android:drawable/ic_lock_lock" app:startIconTint="@color/green_light" app:endIconMode="password_toggle">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/confirmInputL" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword" android:imeOptions="actionDone"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnCreateL" style="@style/StrideButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btn_create_account" android:layout_marginBottom="8dp"/>
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="— OR —" android:gravity="center" android:textColor="@color/gray_hint" android:layout_marginBottom="8dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center" android:layout_marginBottom="8dp">
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnGoogleL" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="48dp" android:layout_height="48dp" android:text="G" android:textSize="16sp" android:textStyle="bold" android:textColor="#4285F4" android:layout_marginEnd="8dp" app:cornerRadius="10dp" app:strokeColor="@color/gray_border"/>
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnAppleL" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="48dp" android:layout_height="48dp" android:text="A" android:textSize="16sp" android:textStyle="bold" android:textColor="#000000" android:layout_marginEnd="8dp" app:cornerRadius="10dp" app:strokeColor="@color/gray_border"/>
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnFacebookL" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="48dp" android:layout_height="48dp" android:text="f" android:textSize="18sp" android:textStyle="bold" android:textColor="#1877F2" android:layout_marginEnd="8dp" app:cornerRadius="10dp" app:strokeColor="@color/gray_border"/>
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnInstagramL" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="48dp" android:layout_height="48dp" android:text="In" android:textSize="12sp" android:textStyle="bold" android:textColor="#E1306C" app:cornerRadius="10dp" app:strokeColor="@color/gray_border"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Already have an account?  " android:textColor="@color/gray_text" android:textSize="13sp"/>
+                    <TextView android:id="@+id/goToLoginL" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Log In" android:textColor="@color/green_med" android:textStyle="bold" android:textSize="13sp" android:clickable="true" android:focusable="true"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</FrameLayout>

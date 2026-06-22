@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green_dark">#3A6B2A</color>
+    <color name="green_med">#2E7D32</color>
+    <color name="green_light">#4CAF50</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray_hint">#999999</color>
+    <color name="gray_border">#DDDDDD</color>
+    <color name="gray_text">#555555</color>
+    <color name="overlay_light">#99FFFFFF</color>
+    <color name="transparent">#00000000</color>
+</resources>

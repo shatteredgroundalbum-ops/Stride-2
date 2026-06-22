@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">STRIDE</string>
+    <string name="email_hint">Email or phone number</string>
+    <string name="password_hint">Password</string>
+    <string name="full_name_hint">Full Name</string>
+    <string name="email_address_hint">Email Address</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="enter_email_hint">Enter your email address</string>
+    <string name="btn_login">Log In</string>
+    <string name="btn_create_account">Create Account</string>
+    <string name="btn_send_reset">Send Reset Link</string>
+    <string name="btn_back_login">Back to Log In</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="have_account">Already have an account?</string>
+    <string name="or">OR</string>
+</resources>

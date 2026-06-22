@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Portrait background -->
+    <ImageView
+        android:id="@+id/splashBgPortrait"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_splash_portrait"
+        android:scaleType="centerCrop"
+        android:visibility="visible" />
+
+    <!-- Landscape background -->
+    <ImageView
+        android:id="@+id/splashBgLandscape"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_splash_landscape"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <!-- Logo centered -->
+    <ImageView
+        android:id="@+id/splashLogo"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_gravity="center"
+        android:src="@drawable/img_logo"
+        android:scaleType="fitCenter"
+        android:alpha="0" />
+
+</FrameLayout>
